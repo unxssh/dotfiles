@@ -16,7 +16,7 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Repositório padrão (pode ser sobrescrito por variável de ambiente DOTFILES_REPO)
-DOTFILES_REPO="${DOTFILES_REPO:-https://github.com/SEU_USUARIO/dotfiles.git}"
+DOTFILES_REPO="${DOTFILES_REPO:-https://github.com/unxssh/dotfiles.git}"
 TARGET_DIR="${HOME}/.dotfiles"
 
 echo -e "${CYAN}"

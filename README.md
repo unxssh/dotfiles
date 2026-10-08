@@ -9,10 +9,10 @@ Configurações personalizadas para Arch Linux com **Hyprland**, **Waybar**, **W
 Para instalar em qualquer máquina Arch Linux com um único comando:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/SEU_USUARIO/dotfiles/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/unxssh/dotfiles/main/install.sh)
 ```
 
-> **Nota:** Substitua `SEU_USUARIO` pelo seu nome de usuário no GitHub após subir este repositório.
+
 
 ---
 
@@ -21,7 +21,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/SEU_USUARIO/dotfiles/main/in
 Se preferir clonar manualmente:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/dotfiles.git ~/.dotfiles
+git clone https://github.com/unxssh/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 chmod +x install.sh
 ./install.sh
