@@ -1,0 +1,176 @@
+* {
+    /* JetBrainsMono Nerd Font & Font Awesome for crisp icons */
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 7 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+/* Discord Dark Palette:
+   Base Bar:     #1e1f22 (Discord darkest background)
+   Modules:      #2b2d31 (Discord sidebar gray)
+   Hover:        #35373c (Discord hover gray)
+   Active/Focus: #5865f2 (Discord Blurple)
+   Borders:      rgba(255, 255, 255, 0.07)
+   Icons:        #ffffff (Pure white)
+   Text:         #dbdee1 (Discord light text)
+   Danger/Alert: #f23f43 (Discord red)
+*/
+
+window#waybar {
+    background-color: rgba(30, 31, 34, 0.92);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Reset default button outlines */
+button {
+    box-shadow: none;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: inherit;
+}
+
+/* ==================== WORKSPACES ==================== */
+#workspaces {
+    background-color: #2b2d31;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    margin: 4px 3px;
+    padding: 2px 4px;
+}
+
+#workspaces button {
+    padding: 3px 9px;
+    margin: 2px;
+    border-radius: 8px;
+    color: #949ba4; /* Discord muted gray */
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: #383a40;
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background-color: #404249; /* Discord selected gray */
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+#workspaces button.urgent {
+    background-color: #f23f43;
+    color: #ffffff;
+}
+
+/* ==================== WINDOW TITLE ==================== */
+#window {
+    background-color: #2b2d31;
+    color: #dbdee1;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 4px 14px;
+    margin: 4px 3px;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ==================== CENTER MODULES (CLOCK & WEATHER) ==================== */
+#clock,
+#custom-weather {
+    background-color: #2b2d31;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 4px 14px;
+    margin: 4px 3px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+#clock:hover,
+#custom-weather:hover {
+    background-color: #35373c;
+}
+
+/* ==================== RIGHT MODULES ==================== */
+.modules-left {
+    margin-left: 4px;
+}
+
+.modules-right {
+    margin-right: 4px;
+}
+
+#pulseaudio,
+#tray {
+    background-color: #2b2d31;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 4px 14px;
+    margin: 4px 4px 4px 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+#pulseaudio:hover,
+#tray:hover {
+    background-color: #35373c;
+    color: #ffffff;
+}
+
+/* Audio States */
+#pulseaudio.muted {
+    background-color: #2b2d31;
+    color: #f23f43;
+}
+
+
+
+/* System Tray */
+#tray {
+    padding: 4px 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #f23f43;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: #1e1f22;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #dbdee1;
+}
+
+tooltip label {
+    padding: 6px 10px;
+}

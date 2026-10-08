@@ -1,0 +1,5 @@
+# AUR packages (installed via yay)
+qt5ct-kde
+qt6ct-kde
+wlogout
+spotify

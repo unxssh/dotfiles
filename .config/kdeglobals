@@ -1,0 +1,7 @@
+[General]
+TerminalApplication=kitty
+[Icons]
+Theme=Papirus-Dark
+
+[KDE]
+widgetStyle=qt6ct-style

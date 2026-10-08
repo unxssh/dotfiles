@@ -1,0 +1,123 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "position": "top",
+    "height": 42,
+    "margin-top": 8,
+    "margin-left": 14,
+    "margin-right": 14,
+    "margin-bottom": 0,
+    "spacing": 6,
+
+    // Modules layout
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock",
+        "custom/weather"
+    ],
+    "modules-right": [
+        "pulseaudio"
+    ],
+
+
+
+    // Workspaces (Hyprland)
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "X"
+        },
+        "persistent-workspaces": {
+            "*": [1]
+        }
+    },
+
+
+
+    // Active window
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 40,
+        "separate-outputs": true
+    },
+
+    // Clock
+    "clock": {
+        "interval": 60,
+        "format": "  {:%H:%M}",
+        "format-alt": "  {:%A, %d de %B de %Y - %H:%M}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    // CPU
+    "cpu": {
+        "interval": 2,
+        "format": "  {usage}%",
+        "tooltip": true
+    },
+
+    // Memory
+    "memory": {
+        "interval": 3,
+        "format": "  {}%",
+        "tooltip": true,
+        "tooltip-format": "Memória: {used:0.1f}GB / {total:0.1f}GB ({percentage}%)"
+    },
+
+    // Network
+    "network": {
+        "interval": 3,
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀  Conectado",
+        "format-linked": "󰈀  {ifname} (Sem IP)",
+        "format-disconnected": "󰈂  Desconectado",
+        "tooltip-format": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}"
+    },
+
+    // Pulseaudio (Audio)
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  Mudo",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    // Tray
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+
+    // Weather
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 900,
+        "exec": "python3 ~/.config/waybar/weather.py",
+        "return-type": "json"
+    }
+
+}

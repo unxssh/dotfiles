@@ -1,0 +1,121 @@
+/* Discord Dark Theme matching Waybar */
+/* Palette:
+   Base Window:   #1e1f22 (rgba(30, 31, 34, 0.92))
+   Modules/Input: #2b2d31
+   Hover:         #35373c
+   Selected:      #383a40 (Discord selected gray)
+   Window Border: #ffffff (Solid White)
+   Text:          #dbdee1 (Discord light text)
+*/
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 7 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    outline: none;
+    box-shadow: none;
+}
+
+window {
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+}
+
+#window {
+    margin: 0px;
+    padding: 12px 12px 8px 12px;
+    background-color: rgba(30, 31, 34, 0.92);
+    border: 2px solid #ffffff;
+    border-radius: 16px;
+    color: #dbdee1;
+}
+
+#outer-box {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#input {
+    margin: 12px 10px 12px 10px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #2b2d31;
+    font-size: 13px;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    outline: none;
+}
+
+#input image {
+    color: #949ba4;
+    margin-right: 8px;
+}
+
+#scroll {
+    margin: 0px 6px 6px 6px;
+    border: none;
+    background-color: transparent;
+}
+
+#inner-box {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#entry {
+    margin: 2px 6px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: #dbdee1;
+    transition: background-color 0.15s ease-in-out;
+}
+
+#entry:hover {
+    background-color: #35373c;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#entry:selected,
+#selected,
+flowboxchild:focus,
+flowboxchild:selected {
+    background-color: #383a40;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#text {
+    margin: 2px;
+    color: inherit;
+    background-color: transparent;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+#img {
+    margin-right: 12px;
+    background-color: transparent;
+}

@@ -1,0 +1,22 @@
+# Wofi Configuration
+# Discord Dark Theme matching Waybar
+
+show=drun
+width=490
+height=445
+location=center
+prompt=Procurar aplicativos...
+filter_rate=100
+allow_images=true
+image_size=24
+term=kitty
+hide_scroll=true
+no_actions=true
+insensitive=true
+matching=multi-contains
+single_click=true
+close_on_focus_loss=true
+gtk_dark=true
+layer=top
+dynamic_lines=false
+lines=8
